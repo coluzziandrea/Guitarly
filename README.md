@@ -1,14 +1,10 @@
-# Vue.js
+# Guitarly
 
-This directory is a brief example of a [Vue.js](https://vuejs.org/) app that can be deployed to Vercel with zero configuration.
+Music Notation Software. Made Easy.
 
-## Deploy Your Own
+## Demo
 
-Deploy your own Vue.js project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vue&template=vue)
-
-_Live Example: https://vue-template.vercel.app_
+_Live Example: https://guitarly-xi.vercel.app_
 
 ## Running Locally
 
