@@ -4,7 +4,7 @@ Music Notation Software. Made Easy.
 
 ## Demo
 
-_Live Example: https://guitarly-xi.vercel.app_
+_Live Example: https://guitarly-coluzziandrea.vercel.app_
 
 ## Running Locally
 
