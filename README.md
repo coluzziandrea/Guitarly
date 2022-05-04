@@ -1,42 +1,16 @@
-# Guitarly
+# Vue 3 + TypeScript + Vite
 
-Music Notation Software. Made Easy.
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/coluzziandrea/Guitarly)
-![Top Language](https://img.shields.io/github/languages/top/coluzziandrea/Guitarly?color=yellow)
-![GitHub Stars](https://img.shields.io/github/stars/coluzziandrea/Guitarly?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/coluzziandrea/Guitarly?style=social)
-![License](https://img.shields.io/github/license/coluzziandrea/Guitarly)
-![Issues](https://img.shields.io/github/issues/coluzziandrea/Guitarly)
+## Recommended IDE Setup
 
-	
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
+## Type Support For `.vue` Imports in TS
 
+Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
-## Demo
+1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
+2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
-_Live Example: https://guitarly-coluzziandrea.vercel.app_
-
-## Running Locally
-
-```
-yarn install
-```
-
-#### Compile and hot-reload for development
-
-```
-yarn serve
-```
-
-#### Compile and minify for production
-
-```
-yarn build
-```
-
-#### Lint and fix files
-
-```
-yarn lint
-```
+You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
