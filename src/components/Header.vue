@@ -25,22 +25,29 @@
     <div className="flex justify-center flex-grow"></div>
 
     <div className="flex items-center sm:space-x-2 justify-end">
-      <p
-        className="text-white select-none whitespace-nowrap font-semibold pr-3"
-      >
-        Test User
-      </p>
+      <DocumentAddIcon class="h-6 w-6 text-white mr-4 cursor-pointer" />
+      <NewSheet v-show="isModalVisible" @close="closeModal" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import { DocumentAddIcon } from "@heroicons/vue/solid";
+
+import NewSheet from "./popup/NewSheet.vue";
 
 @Options({
   props: {},
+  components: { DocumentAddIcon, NewSheet },
 })
-export default class Header extends Vue {}
+export default class Header extends Vue {
+  isModalVisible = true;
+
+  closeModal() {
+    this.isModalVisible = false;
+  }
+}
 </script>
 
 <style>

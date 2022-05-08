@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import { useSheetStore } from "../../store/sheet";
 import Measure from "./measure/Measure.vue";
 
 @Options({
@@ -14,5 +15,9 @@ import Measure from "./measure/Measure.vue";
   },
   props: {},
 })
-export default class Tablature extends Vue {}
+export default class Tablature extends Vue {
+  mounted() {
+    const store = useSheetStore();
+  }
+}
 </script>
