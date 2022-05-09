@@ -1,6 +1,6 @@
 <template>
   <div
-    className="sticky top-0 z-50 bg-pistachio flex items-center p-2 lg:px-5 shadow-md"
+    className="sticky top-0 z-10 bg-pistachio flex items-center p-2 lg:px-5 shadow-md"
   >
     <div className="flex items-center">
       <img
@@ -25,8 +25,10 @@
     <div className="flex justify-center flex-grow"></div>
 
     <div className="flex items-center sm:space-x-2 justify-end">
-      <DocumentAddIcon class="h-6 w-6 text-white mr-4 cursor-pointer" />
-      <NewSheet v-show="isModalVisible" @close="closeModal" />
+      <DocumentAddIcon
+        @click="openNewSheetModal"
+        class="h-6 w-6 text-white mr-4 cursor-pointer"
+      />
     </div>
   </div>
 </template>
@@ -35,23 +37,13 @@
 import { Options, Vue } from "vue-class-component";
 import { DocumentAddIcon } from "@heroicons/vue/solid";
 
-import NewSheet from "./popup/NewSheet.vue";
-
 @Options({
   props: {},
-  components: { DocumentAddIcon, NewSheet },
+  components: { DocumentAddIcon },
 })
 export default class Header extends Vue {
-  isModalVisible = true;
-
-  closeModal() {
-    this.isModalVisible = false;
+  openNewSheetModal() {
+    this.$emit("open-new-sheet", {});
   }
 }
 </script>
-
-<style>
-.header-title {
-  font-family: "Metal Mania", serif;
-}
-</style>
