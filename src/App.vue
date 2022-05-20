@@ -1,8 +1,11 @@
 <template>
-  <Header @open-new-sheet="showModal" />
-  <router-view />
-
-  <NewSheet v-show="isModalVisible" @close="closeModal" />
+  <div class="h-screen overflow-hidden bg-gray-100">
+    <Header @open-new-sheet="showModal" />
+    <main class="flex">
+      <router-view />
+    </main>
+    <NewSheet v-show="isModalVisible" @close="closeModal" />
+  </div>
 </template>
 
 <script lang="ts">
