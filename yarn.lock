@@ -3724,6 +3724,11 @@
   "resolved" "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-0.9.3.tgz"
   "version" "0.9.3"
 
+"es6-object-assign@1.1.0":
+  "integrity" "sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw="
+  "resolved" "https://registry.npmjs.org/es6-object-assign/-/es6-object-assign-1.1.0.tgz"
+  "version" "1.1.0"
+
 "escalade@^3.1.1":
   "integrity" "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw=="
   "resolved" "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz"
@@ -7987,6 +7992,14 @@
     "@vue/runtime-dom" "3.2.33"
     "@vue/server-renderer" "3.2.33"
     "@vue/shared" "3.2.33"
+
+"vuejs3-logger@1.0.0":
+  "integrity" "sha512-fnUypm2TGQ+gEMs+0S8MsqGw/LGmGCd2ug2B5IryiLhI3vqzEJfHK680SDJ5SZCAeACtZxYXbRAp5llggZzvtA=="
+  "resolved" "https://registry.npmjs.org/vuejs3-logger/-/vuejs3-logger-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "es6-object-assign" "1.1.0"
+    "vue" "^3.0.0"
 
 "w3c-hr-time@^1.0.2":
   "integrity" "sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ=="
