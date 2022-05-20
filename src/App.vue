@@ -1,15 +1,30 @@
 <template>
+  <Header @open-new-sheet="showModal" />
   <router-view />
+
+  <NewSheet v-show="isModalVisible" @close="closeModal" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import NewSheet from "@/components/popup/NewSheet.vue";
+import Header from "@/components/Header.vue";
 
 @Options({
   props: {},
-  components: {},
+  components: { Header, NewSheet },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  isModalVisible = false;
+
+  showModal() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
+  }
+}
 </script>
 <style lang="scss">
 #app {
