@@ -11,6 +11,7 @@ export const useSheetStore = defineStore({
 
   actions: {
     createSheet(sheet: Sheet) {
+      console.log("ci sono");
       if (!sheet) return;
 
       this.sheet = sheet;

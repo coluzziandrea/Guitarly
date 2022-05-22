@@ -67,21 +67,22 @@
 import { Options, Vue } from "vue-class-component";
 import { XIcon } from "@heroicons/vue/solid";
 import { useSheetStore } from "@/store/sheet";
-import { useRootStore } from "@/store/root";
+import { useNewSheetStore } from "@/store/new-sheet";
 
 @Options({
   props: {},
   components: { XIcon },
 })
 export default class NewSheet extends Vue {
+  newSheetStore = useNewSheetStore();
+  sheetStore = useSheetStore();
+
   sheetName = "";
   author = "Test User";
 
-  rootStore = useRootStore();
-
   _closePopup() {
     this.$log.debug("Closing new sheet popup");
-    this.rootStore.toggleNewSheetModal(false);
+    this.newSheetStore.toggleModal(false);
   }
 
   closeNewSheet() {
@@ -92,7 +93,7 @@ export default class NewSheet extends Vue {
     this.$log.debug("New sheet submit", this.sheetName);
     e.preventDefault();
 
-    useSheetStore().createSheet({ name: this.sheetName, author: this.author });
+    this.sheetStore.createSheet({ name: this.sheetName, author: this.author });
 
     this.$log.debug("Navigating to sheet view");
     this.$router.push("/sheet");

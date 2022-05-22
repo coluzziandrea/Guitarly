@@ -4,7 +4,7 @@
     <main class="flex">
       <router-view />
     </main>
-    <NewSheet v-show="rootStore.newSheetModalOpen" />
+    <NewSheet v-show="newSheetStore.modalOpen" />
   </div>
 </template>
 
@@ -13,14 +13,14 @@ import { Options, Vue } from "vue-class-component";
 import NewSheet from "@/components/popup/NewSheet.vue";
 import Header from "@/components/Header.vue";
 
-import { useRootStore } from "@/store/root";
+import { useNewSheetStore } from "@/store/new-sheet";
 
 @Options({
   props: {},
   components: { Header, NewSheet },
 })
 export default class App extends Vue {
-  rootStore = useRootStore();
+  newSheetStore = useNewSheetStore();
 }
 </script>
 <style lang="scss">

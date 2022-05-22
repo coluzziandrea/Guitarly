@@ -22,14 +22,18 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
+import { useNewSheetStore } from "@/store/new-sheet";
+
 import Tablature from "@/components/tablature/Tablature.vue";
 
 @Options({
   components: {},
 })
 export default class HomeView extends Vue {
+  newSheetStore = useNewSheetStore();
+
   openNewSheetModal() {
-    this.$emit("open-new-sheet", {});
+    this.newSheetStore.toggleModal(true);
   }
 }
 </script>
