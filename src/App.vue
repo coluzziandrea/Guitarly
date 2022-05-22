@@ -1,10 +1,10 @@
 <template>
   <div class="h-screen overflow-hidden bg-gray-100">
-    <Header @open-new-sheet="showModal" />
+    <Header />
     <main class="flex">
       <router-view />
     </main>
-    <NewSheet v-show="isModalVisible" @close="closeModal" />
+    <NewSheet v-show="rootStore.newSheetModalOpen" />
   </div>
 </template>
 
@@ -13,20 +13,14 @@ import { Options, Vue } from "vue-class-component";
 import NewSheet from "@/components/popup/NewSheet.vue";
 import Header from "@/components/Header.vue";
 
+import { useRootStore } from "@/store/root";
+
 @Options({
   props: {},
   components: { Header, NewSheet },
 })
 export default class App extends Vue {
-  isModalVisible = false;
-
-  showModal() {
-    this.isModalVisible = true;
-  }
-
-  closeModal() {
-    this.isModalVisible = false;
-  }
+  rootStore = useRootStore();
 }
 </script>
 <style lang="scss">

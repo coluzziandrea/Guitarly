@@ -36,14 +36,17 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { DocumentAddIcon } from "@heroicons/vue/solid";
+import { useRootStore } from "@/store/root";
 
 @Options({
   props: {},
   components: { DocumentAddIcon },
 })
 export default class Header extends Vue {
+  rootStore = useRootStore();
+
   openNewSheetModal() {
-    this.$emit("open-new-sheet", {});
+    this.rootStore.toggleNewSheetModal(true);
   }
 }
 </script>
