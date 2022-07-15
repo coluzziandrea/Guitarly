@@ -12,6 +12,7 @@
     "@heroicons/vue": "^1.0.6",
     "core-js": "^3.8.3",
     "pinia": "^2.0.13",
+    "tone": "^14.7.77",
     "typeface-roboto": "^1.1.13",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",

@@ -36,7 +36,7 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { DocumentAddIcon } from "@heroicons/vue/solid";
-import { useNewSheetStore } from "@/store/new-sheet";
+import { useNewSheetStore } from "@/store/sheet/new-sheet";
 
 @Options({
   props: {},

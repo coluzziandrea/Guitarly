@@ -66,8 +66,8 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { XIcon } from "@heroicons/vue/solid";
-import { useSheetStore } from "@/store/sheet";
-import { useNewSheetStore } from "@/store/new-sheet";
+import { useSheetStore } from "@/store/sheet/sheet";
+import { useNewSheetStore } from "@/store/sheet/new-sheet";
 
 @Options({
   props: {},
@@ -78,7 +78,7 @@ export default class NewSheet extends Vue {
   sheetStore = useSheetStore();
 
   sheetName = "";
-  author = "Test User";
+  author = "Test User"; // TODO
 
   _closePopup() {
     this.$log.debug("Closing new sheet popup");

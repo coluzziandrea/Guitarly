@@ -9,10 +9,6 @@ Music Notation Software. Made Easy.
 ![License](https://img.shields.io/github/license/coluzziandrea/Guitarly)
 ![Issues](https://img.shields.io/github/issues/coluzziandrea/Guitarly)
 
-	
-
-
-
 ## Demo
 
 _Live Example: https://guitarly-coluzziandrea.vercel.app_
@@ -40,3 +36,10 @@ yarn build
 ```
 yarn lint
 ```
+
+## Dependencies
+
+This project depends on the following packages:
+
+- [Tone.js](https://github.com/Tonejs/Tone.js)
+- [MIDI.js Soundfonts](https://github.com/gleitz/midi-js-soundfonts)

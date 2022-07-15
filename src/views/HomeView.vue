@@ -22,7 +22,7 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
-import { useNewSheetStore } from "@/store/new-sheet";
+import { useNewSheetStore } from "@/store/sheet/new-sheet";
 
 import Tablature from "@/components/tablature/Tablature.vue";
 
