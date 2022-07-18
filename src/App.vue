@@ -11,7 +11,7 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import NewSheet from "@/components/popup/NewSheet.vue";
-import Header from "@/components/Header.vue";
+import Header from "@/components/header/Header.vue";
 
 import { useNewSheetStore } from "@/store/sheet/new-sheet";
 

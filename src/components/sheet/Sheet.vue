@@ -1,7 +1,4 @@
 <template>
-  <div>
-    <button @click="play">Play</button>
-  </div>
   <div class="flex-grow m-4">
     <div>
       <h1
@@ -13,22 +10,26 @@
         {{ sheetStore.sheet.author }}
       </h2>
     </div>
-    <div>
-      <Tablature></Tablature>
+    <div class="flex justify-between gap-8 h-3/5">
+      <Sidebar class="flex-1"></Sidebar>
+      <Tablature class="flex-auto"></Tablature>
     </div>
   </div>
+  <Dock></Dock>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Tablature from "../tablature/Tablature.vue";
+import Dock from "@/components/dock/Dock.vue";
+import Sidebar from "@/components/sidebar/Sidebar.vue";
 import { useSheetStore } from "@/store/sheet/sheet";
 
 import * as Tone from "tone";
 
 @Options({
   props: {},
-  components: { Tablature },
+  components: { Tablature, Dock, Sidebar },
 })
 export default class Sheet extends Vue {
   sheetStore = useSheetStore();
