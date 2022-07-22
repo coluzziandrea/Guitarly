@@ -10,12 +10,12 @@
         {{ sheetStore.sheet.author }}
       </h2>
     </div>
-    <div class="flex justify-between gap-8 h-3/5">
+    <div class="flex justify-between gap-8 h-[52%]">
       <Sidebar class="flex-1"></Sidebar>
       <Tablature class="flex-auto"></Tablature>
     </div>
   </div>
-  <Dock></Dock>
+  <Dock class="absolute top-[85%]"></Dock>
 </template>
 
 <script lang="ts">
