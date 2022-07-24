@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sticky top-0 z-10 bg-pistachio flex items-center p-2 lg:px-5 shadow-md"
+    class="sticky top-0 z-10 bg-pistachio-700 flex items-center p-2 lg:px-5 shadow-md"
   >
     <div class="flex items-center">
       <img
